@@ -2,6 +2,10 @@ body {
   padding: 50px;
   font-family: 'Inter', 'NanumSquare', 'Apple SD Gothic Neo', 'Malgun Gothic',
     'Nanum Gothic', 'Noto Sans', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
@@ -35,17 +39,19 @@ section {
 .section__logo {
   width: 40rem;
   margin: 15rem 0 10rem;
+  font-size: 500px;
+}
+
+.box-text {
+  margin-bottom: 10rem;
 }
 
 .section__img {
-  position: absolute;
   width: 1000px;
   height: 500px;
   transition: 1s all;
   border-radius: 1rem;
   object-fit: cover;
-  top: 10rem;
-  left: 0;
 }
 
 .group-photo {
