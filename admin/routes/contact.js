@@ -3,19 +3,11 @@ var router = express.Router();
 
 // 로그인 페이지
 router.get("/", async (req, res, next) => {
-	res.render("login");
+	res.render("contact");
 });
 
 router.post("/", async (req, res, next) => {
-	res.redirect("/login");
-});
-
-router.get("/main", async (req, res, next) => {
-	res.render("index");
-});
-
-router.post("/main", async (req, res, next) => {
-	res.redirect("/main");
+	res.redirect("/contact");
 });
 
 module.exports = router;
