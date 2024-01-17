@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15rem;
+}
+
+.box-text {
+  margin-top: 15rem;
+  margin-bottom: 15rem;
+  text-align: center;
+}

@@ -3,6 +3,11 @@
    License: none (public domain)
 */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 html,
 body,
 div,
@@ -131,4 +136,5 @@ table {
 
 a {
   text-decoration: none;
+  color: #111;
 }

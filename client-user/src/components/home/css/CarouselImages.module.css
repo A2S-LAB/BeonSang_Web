@@ -1,0 +1,11 @@
+.carousel-item {
+  transform: translateX(25%);
+}
+
+.carousel-item__img {
+  margin: 1rem;
+  border-radius: 1rem;
+  width: 1000px;
+  height: 500px;
+  object-fit: cover;
+}
