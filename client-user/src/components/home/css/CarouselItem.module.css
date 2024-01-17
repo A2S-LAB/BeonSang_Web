@@ -3,5 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(25%);
+  transform: translateX(-25%);
+  transition: 1s all;
 }

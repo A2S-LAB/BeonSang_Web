@@ -8,4 +8,16 @@
   width: 1000px;
   height: 500px;
   object-fit: cover;
+  transition: 3s all;
+  animation: change 1s;
+}
+
+@keyframes change {
+  0% {
+    opacity: 80%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }

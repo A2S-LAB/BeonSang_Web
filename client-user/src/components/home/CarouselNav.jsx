@@ -16,12 +16,17 @@ export const CarouselNav = ({ imageCount, onImageCount }) => {
 
   return (
     <nav className={classes.carousel__nav}>
-      <button className={classes.carousel__prev} onClick={handlePrev}>
-        <RiArrowDropLeftLine />
-      </button>
-      <button className={classes.carousel__next} onClick={handleNext}>
-        <RiArrowDropRightLine />
-      </button>
+      {imageCount > 0 && (
+        <button className={classes.carousel__prev} onClick={handlePrev}>
+          <RiArrowDropLeftLine />
+        </button>
+      )}
+
+      {imageCount < 2 && (
+        <button className={classes.carousel__next} onClick={handleNext}>
+          <RiArrowDropRightLine />
+        </button>
+      )}
     </nav>
   );
 };

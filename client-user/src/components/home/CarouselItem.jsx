@@ -5,16 +5,11 @@ import { CarouselImages } from './CarouselImages';
 
 export const CarouselItem = () => {
   const [imageCount, setImageCount] = useState(0);
-  const [showImage, setShowImage] = useState(true);
 
   return (
     <div className={classes['carousel-item']}>
       <CarouselNav imageCount={imageCount} onImageCount={setImageCount} />
-      <CarouselImages
-        imageCount={imageCount}
-        onImageCount={setImageCount}
-        showImage={showImage}
-      />
+      <CarouselImages imageCount={imageCount} onImageCount={setImageCount} />
     </div>
   );
 };
