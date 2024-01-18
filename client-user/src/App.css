@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Inter', 'NanumSquare', 'Apple SD Gothic Neo', 'Malgun Gothic',
+    'Nanum Gothic', 'Noto Sans', 'sans-serif';
+}
