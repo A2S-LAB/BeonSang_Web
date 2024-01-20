@@ -4,5 +4,23 @@
   justify-content: center;
   align-items: center;
   transform: translateX(-25%);
+  animation: onImage 3.5;
+}
+
+.carousel-item img {
   transition: 1s all;
+}
+
+@keyframes onImage {
+  0% {
+    opacity: 0%;
+  }
+
+  90% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }

@@ -6,8 +6,44 @@
   padding-top: 15rem;
 }
 
+.section__logo {
+  width: 40rem;
+  font-size: 500px;
+  animation: onImage 2s;
+}
+
 .box-text {
   margin-top: 15rem;
   margin-bottom: 15rem;
   text-align: center;
+}
+
+.box-text p {
+  margin-bottom: 1rem;
+}
+
+.box-text p:first-child {
+  animation: onImage 3s;
+}
+
+.box-text p:nth-child(2) {
+  animation: onImage 4s;
+}
+
+.box-text p:last-child {
+  animation: onImage 5s;
+}
+
+@keyframes onImage {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
