@@ -1,12 +1,12 @@
 import classes from './css/CarouselImages.module.css';
-import restaurant from '../../assets/restaurant.jpg';
-import chef from '../../assets/chef.jpg';
-import sushi from '../../assets/sushi.jpg';
+import beomsangOuter from '../../assets/beomsang-outer.jpeg';
+import beomsangInner from '../../assets/beomsang-inner.jpeg';
+import beomsangFood from '../../assets/beomsang-food.jpeg';
 
 const IMAGES = [
-  { title: 'restaurant', image: restaurant },
-  { title: 'chef', image: chef },
-  { title: 'sushi', image: sushi },
+  { title: 'beomsang-outer', image: beomsangOuter },
+  { title: 'beomsang-inner', image: beomsangInner },
+  { title: 'beomsang-food', image: beomsangFood },
 ];
 
 export const CarouselImages = ({ imageCount, className }) => {

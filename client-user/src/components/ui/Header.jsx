@@ -5,13 +5,13 @@ export const Header = () => {
   return (
     <header className={classes.header}>
       <div>
-        <Link to='/'>A2S</Link>
+        <Link to='/'>범상 스프커리</Link>
       </div>
 
       <nav>
-        <Link to='/menu'>MENU</Link>
-        <Link to='/recruit'>RECRUIT</Link>
-        <Link to='/contact'>CONTACT</Link>
+        <Link to='/menu'>범상 이야기</Link>
+        <Link to='/recruit'>메뉴</Link>
+        <Link to='/contact'>채용</Link>
       </nav>
     </header>
   );
