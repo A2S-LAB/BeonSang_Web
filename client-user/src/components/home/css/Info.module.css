@@ -30,8 +30,16 @@
   animation: onImage 4s;
 }
 
-.box-text p:last-child {
+.box-text p:nth-child(3) {
   animation: onImage 5s;
+}
+
+.box-text p:nth-child(4) {
+  animation: onImage 6s;
+}
+
+.box-text p:last-child {
+  animation: onImage 7s;
 }
 
 @keyframes onImage {
