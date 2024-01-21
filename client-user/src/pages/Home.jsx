@@ -6,13 +6,24 @@ import { Description } from '../components/home/Description';
 import { Footer } from '../components/home/Footer';
 
 export const Home = () => {
+  const [scrollYValue, setScrollYValue] = useState('');
+
+  const handleScroll = () => {
+    setScrollYValue(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    console.log(scrollYValue);
+  });
+
   return (
     <>
       <Header />
-      <Info />
-      <Carousel />
-      <Description />
-      <Footer />
+      <Info scrollY={scrollYValue} />
+      <Carousel scrollY={scrollYValue} />
+      <Description scrollY={scrollYValue} />
+      <Footer scrollY={scrollYValue} />
     </>
   );
 };

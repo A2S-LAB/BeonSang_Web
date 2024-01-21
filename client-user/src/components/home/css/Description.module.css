@@ -5,36 +5,46 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   margin-top: 1rem;
+  animation: onImage 1s;
 }
 
 .parent div:first-child {
   grid-area: 2 / 2 / 3 / 3;
+  animation: onImage 3s;
 }
 .parent div:nth-child(2) {
   grid-area: 2 / 3 / 3 / 4;
+  animation: onImage 3s;
 }
 .parent div:nth-child(3) {
   grid-area: 3 / 2 / 4 / 3;
+  animation: onImage 3s;
 }
 .parent div:nth-child(4) {
   grid-area: 4 / 2 / 5 / 3;
+  animation: onImage 3s;
 }
 .parent div:nth-child(5) {
   grid-area: 3 / 3 / 4 / 4;
+  animation: onImage 3s;
 }
 .parent div:nth-child(6) {
-  grid-area: 4 / 3 / 5 / 4;
   margin-bottom: 2rem;
+  grid-area: 4 / 3 / 5 / 4;
+  animation: onImage 3s;
 }
 .parent div:nth-child(7) {
-  grid-area: 5 / 3 / 6 / 4;
   margin-bottom: 2rem;
+  grid-area: 5 / 3 / 6 / 4;
+  animation: onImage 3s;
 }
 .parent div:nth-child(8) {
   grid-area: 6 / 2 / 7 / 3;
+  animation: onImage 3s;
 }
 .parent div:last-child {
   grid-area: 6 / 3 / 7 / 4;
+  animation: onImage 3s;
 }
 .parent div:last-child div {
   padding-bottom: 1rem;
@@ -58,4 +68,18 @@
   height: 2rem;
   background-color: #111;
   color: #fff;
+}
+
+@keyframes onImage {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }

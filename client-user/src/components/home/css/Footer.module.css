@@ -5,9 +5,24 @@
   width: 100vw;
   height: 10vh;
   margin-bottom: 5rem;
+  animation: onImage 3s;
 }
 
 .footer a {
   margin: 1rem;
   font-size: 2rem;
+}
+
+@keyframes onImage {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
