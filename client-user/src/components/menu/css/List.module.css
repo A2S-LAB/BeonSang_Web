@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 15rem;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main h1 {
+  position: absolute;
+  padding: 0 7rem;
+  left: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}

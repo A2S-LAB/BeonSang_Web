@@ -1,7 +1,3 @@
-.carousel-item {
-  transform: translateX(25%);
-}
-
 .carousel-item__img {
   margin: 1rem;
   border-radius: 1rem;
@@ -9,12 +5,17 @@
   height: 500px;
   object-fit: cover;
   transition: 3s all;
-  animation: change 1s;
+  animation: onImage 4s;
+  transform: translateX(25%);
 }
 
-@keyframes change {
+@keyframes onImage {
   0% {
-    opacity: 80%;
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
   }
 
   100% {

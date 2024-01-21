@@ -1,14 +1,16 @@
-.carousel-item {
-  position: relative;
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateX(-25%);
-  animation: onImage 3.5;
+  width: 100vw;
+  height: 10vh;
+  margin-bottom: 5rem;
+  animation: onImage 3s;
 }
 
-.carousel-item img {
-  transition: 1s all;
+.footer a {
+  margin: 1rem;
+  font-size: 2rem;
 }
 
 @keyframes onImage {
@@ -16,7 +18,7 @@
     opacity: 0%;
   }
 
-  90% {
+  70% {
     opacity: 0%;
   }
 
