@@ -6,10 +6,18 @@
   padding-top: 15rem;
 }
 
-.section__logo {
+.box-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-logo__logo {
   width: 40rem;
   font-size: 500px;
   animation: onImage 2s;
+  margin-bottom: 3rem;
 }
 
 .box-text {

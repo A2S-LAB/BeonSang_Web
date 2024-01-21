@@ -4,8 +4,12 @@ import beomsangLogo from '../../assets/beomsang-logo.jpg';
 export const Info = () => {
   return (
     <main className={classes.main}>
-      <section>
-        <img className={classes.section__logo} src={beomsangLogo} alt='범상' />
+      <section className={classes['box-logo']}>
+        <img
+          className={classes['box-logo__logo']}
+          src={beomsangLogo}
+          alt='범상'
+        />
       </section>
       <section className={classes['box-text']}>
         <p>
