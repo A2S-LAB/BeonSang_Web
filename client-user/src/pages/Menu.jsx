@@ -5,7 +5,7 @@ export const Menu = () => {
   return (
     <>
       <Header />
-      <Section title={'시그니처 스프카레'} />
+      <Section />
     </>
   );
 };

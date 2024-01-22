@@ -1,0 +1,24 @@
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15rem 0;
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.text-box div:nth-child(2) {
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.text-box div:nth-child(3) p {
+  margin-bottom: 1rem;
+}
