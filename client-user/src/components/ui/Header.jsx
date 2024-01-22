@@ -9,9 +9,11 @@ export const Header = () => {
       </div>
 
       <nav>
-        <Link to='/menu'>범상 이야기</Link>
-        <Link to='/recruit'>메뉴</Link>
+        <Link to='/menu'>메뉴</Link>
         <Link to='/contact'>채용</Link>
+        <Link to='https://map.naver.com/p/search/%EB%B2%94%EC%83%81/place/1111530355?searchType=place&lng=126.6427315&lat=37.3834875&placePath=/booking?bookingRedirectUrl=https://pcmap.place.naver.com/restaurant/1111530355/booking?theme=place&entry=pll&c=15.00,0,0,0,dh'>
+          예약
+        </Link>
       </nav>
     </header>
   );

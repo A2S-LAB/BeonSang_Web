@@ -1,15 +1,26 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  padding: 15rem;
-  width: 100vw;
-  height: 100vh;
+.ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  margin-bottom: 5rem;
 }
 
-.main h1 {
-  position: absolute;
-  padding: 0 7rem;
-  left: 0;
-  font-size: 2rem;
-  font-weight: 700;
+.h3 {
+  animation: onText 1s;
+}
+
+@keyframes onText {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
