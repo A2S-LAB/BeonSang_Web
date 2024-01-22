@@ -7,6 +7,10 @@
   margin-bottom: 1rem;
 }
 
+.box-text p strong {
+  font-weight: 800;
+}
+
 .box-text p:first-child {
   animation: onImage 2s;
 }
