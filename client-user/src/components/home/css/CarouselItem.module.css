@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   transform: translateX(-25%);
-  animation: onImage 3.5;
+  animation: onImage 1s;
 }
 
 .carousel-item img {

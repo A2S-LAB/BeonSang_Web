@@ -1,17 +1,9 @@
 import classes from './css/Info.module.css';
-import beomsangLogo from '../../assets/beomsang-logo.jpg';
 
 export const Info = ({ scrollY }) => {
   return (
-    <main className={classes.main}>
-      <section className={classes['box-logo']}>
-        <img
-          className={classes['box-logo__logo']}
-          src={beomsangLogo}
-          alt='범상'
-        />
-      </section>
-      {scrollY >= 0 && (
+    <>
+      {scrollY >= 100 && (
         <section className={classes['box-text']}>
           <p>
             시그니처 스프카레. 홈런볼 스프커리. 메가 닭고기 스프커리. 점보
@@ -30,6 +22,6 @@ export const Info = ({ scrollY }) => {
           <p>곁들임 후식. 카레치킨. 멘치카츠. 순살 대구 튀김. 크림치즈곶감.</p>
         </section>
       )}
-    </main>
+    </>
   );
 };

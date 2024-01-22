@@ -5,7 +5,7 @@
   height: 500px;
   object-fit: cover;
   transition: 3s all;
-  animation: onImage 4s;
+  animation: onImage 5s;
   transform: translateX(25%);
 }
 
