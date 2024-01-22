@@ -1,16 +1,17 @@
-.footer {
+.box-logo {
+  margin-top: 10rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 10vh;
-  margin: 10rem 0 5rem 0;
-  animation: onImage 3s;
+  height: 105vh;
 }
 
-.footer a {
-  margin: 1rem;
-  font-size: 2rem;
+.box-logo__logo {
+  width: 40rem;
+  font-size: 500px;
+  animation: onImage 3s;
+  margin-bottom: 3rem;
 }
 
 @keyframes onImage {

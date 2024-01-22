@@ -1,0 +1,53 @@
+.li {
+  width: 20vw;
+  box-shadow: 14px 12px 121px -47px rgba(0, 0, 0, 0.75);
+  animation: onImage 2s;
+}
+
+.li img {
+  width: 20vw;
+  height: 20vw;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+}
+
+.li div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.li div h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.li div p {
+  margin-bottom: 1rem;
+}
+
+.li strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  width: 5rem;
+  height: 3rem;
+}
+
+@keyframes onImage {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}

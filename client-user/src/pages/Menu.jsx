@@ -1,11 +1,11 @@
 import { Header } from '../components/ui/Header';
-import { List } from '../components/menu/List';
+import { Section } from '../components/menu/Section';
 
 export const Menu = () => {
   return (
     <>
       <Header />
-      <List />
+      <Section />
     </>
   );
 };

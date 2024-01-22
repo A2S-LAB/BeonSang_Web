@@ -1,76 +1,91 @@
-.parent {
+/* animation: onText 3s; */
+
+.brand-promise {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+}
+
+.top,
+.bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
-  margin-top: 1rem;
-  animation: onImage 1s;
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 15px;
+  animation: onText 3s;
 }
 
-.parent div:first-child {
+.middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+}
+
+.bottom {
+  margin-bottom: 1.5rem;
+}
+
+.middle div:first-child {
   grid-area: 2 / 2 / 3 / 3;
-  animation: onImage 3s;
+  animation: onText 3s;
 }
-.parent div:nth-child(2) {
-  grid-area: 2 / 3 / 3 / 4;
-  animation: onImage 3s;
-}
-.parent div:nth-child(3) {
+.middle div:nth-child(2) {
   grid-area: 3 / 2 / 4 / 3;
-  animation: onImage 3s;
+  animation: onText 4s;
 }
-.parent div:nth-child(4) {
-  grid-area: 4 / 2 / 5 / 3;
-  animation: onImage 3s;
+.middle div:nth-child(3) {
+  grid-area: 2 / 3 / 3 / 4;
+  animation: onText 5s;
 }
-.parent div:nth-child(5) {
+.middle div:nth-child(4) {
   grid-area: 3 / 3 / 4 / 4;
-  animation: onImage 3s;
+  animation: onText 6s;
 }
-.parent div:nth-child(6) {
-  margin-bottom: 2rem;
+.middle div:last-child {
   grid-area: 4 / 3 / 5 / 4;
-  animation: onImage 3s;
-}
-.parent div:nth-child(7) {
-  margin-bottom: 2rem;
-  grid-area: 5 / 3 / 6 / 4;
-  animation: onImage 3s;
-}
-.parent div:nth-child(8) {
-  grid-area: 6 / 2 / 7 / 3;
-  animation: onImage 3s;
-}
-.parent div:last-child {
-  grid-area: 6 / 3 / 7 / 4;
-  animation: onImage 3s;
-}
-.parent div:last-child div {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #111;
+  animation: onText 7s;
 }
 
-.parent h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.parent div strong {
+.middle strong {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 1rem;
+  margin: 1rem 0;
+  border-radius: 50%;
   width: 2rem;
   height: 2rem;
   background-color: #111;
   color: #fff;
 }
 
-@keyframes onImage {
+.top div:first-child,
+.bottom div:first-child {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.top div:last-child,
+.bottom div:last-child {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.top div h3 {
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.top div:last-child {
+  margin-top: 2rem;
+}
+
+.border-line {
+  margin: 1rem 0;
+  border: 1px solid #111;
+}
+
+@keyframes onText {
   0% {
     opacity: 0%;
   }

@@ -1,27 +1,4 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 15rem;
-}
-
-.box-logo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.box-logo__logo {
-  width: 40rem;
-  font-size: 500px;
-  animation: onImage 2s;
-  margin-bottom: 3rem;
-}
-
 .box-text {
-  margin-top: 15rem;
   margin-bottom: 15rem;
   text-align: center;
 }
@@ -30,24 +7,28 @@
   margin-bottom: 1rem;
 }
 
+.box-text p strong {
+  font-weight: 800;
+}
+
 .box-text p:first-child {
-  animation: onImage 3s;
+  animation: onImage 2s;
 }
 
 .box-text p:nth-child(2) {
-  animation: onImage 4s;
+  animation: onImage 3s;
 }
 
 .box-text p:nth-child(3) {
-  animation: onImage 5s;
+  animation: onImage 4s;
 }
 
 .box-text p:nth-child(4) {
-  animation: onImage 6s;
+  animation: onImage 5s;
 }
 
 .box-text p:last-child {
-  animation: onImage 7s;
+  animation: onImage 6s;
 }
 
 @keyframes onImage {

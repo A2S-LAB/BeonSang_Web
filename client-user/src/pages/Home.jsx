@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../components/ui/Header';
+import { Logo } from '../components/home/Logo';
 import { Info } from '../components/home/Info';
 import { Carousel } from '../components/home/Carousel';
 import { Description } from '../components/home/Description';
@@ -14,12 +15,12 @@ export const Home = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    console.log(scrollYValue);
   });
 
   return (
     <>
       <Header />
+      <Logo />
       <Info scrollY={scrollYValue} />
       <Carousel scrollY={scrollYValue} />
       <Description scrollY={scrollYValue} />
