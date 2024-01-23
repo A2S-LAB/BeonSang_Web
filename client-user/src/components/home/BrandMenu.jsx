@@ -1,6 +1,6 @@
-import classes from './css/Info.module.css';
+import classes from './css/BrandMenu.module.css';
 
-export const Info = ({ scrollY }) => {
+export const BrandMenu = ({ scrollY }) => {
   return (
     <>
       {scrollY >= 0 && (

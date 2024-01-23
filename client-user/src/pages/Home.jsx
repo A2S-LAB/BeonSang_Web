@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Header } from '../components/ui/Header';
 import { Logo } from '../components/home/Logo';
-import { Info } from '../components/home/Info';
+import { BrandMenu } from '../components/home/BrandMenu';
 import { Carousel } from '../components/home/Carousel';
-import { Description } from '../components/home/Description';
+import { BrandPromise } from '../components/home/BrandPromise';
 import { Footer } from '../components/home/Footer';
 
 export const Home = () => {
@@ -21,9 +21,9 @@ export const Home = () => {
     <>
       <Header />
       <Logo scrollY={scrollYValue} />
-      <Info scrollY={scrollYValue} />
+      <BrandMenu scrollY={scrollYValue} />
       <Carousel scrollY={scrollYValue} />
-      <Description scrollY={scrollYValue} />
+      <BrandPromise scrollY={scrollYValue} />
       <Footer scrollY={scrollYValue} />
     </>
   );
