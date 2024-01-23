@@ -5,7 +5,7 @@ export const BrandPromise = ({ scrollY }) => {
   console.log(scrollY);
   return (
     <section className={classes['brand-promise']}>
-      {scrollY >= 500 && (
+      {scrollY >= 800 && (
         <div className={classes.top}>
           <div>
             <h3>BRAND PROMISE</h3>
@@ -20,7 +20,7 @@ export const BrandPromise = ({ scrollY }) => {
         </div>
       )}
 
-      {scrollY >= 600 && (
+      {scrollY >= 900 && (
         <div className={classes.bottom}>
           <BrandPromiseText />
           <div>
