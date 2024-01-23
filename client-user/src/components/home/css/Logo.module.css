@@ -1,16 +1,17 @@
 .box-logo {
-  margin-top: 5rem;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .box-logo__logo {
-  width: 40rem;
+  width: 30rem;
   font-size: 500px;
-  animation: onImage 3s;
+  animation: onImage 1s;
   margin-bottom: 3rem;
 }
 

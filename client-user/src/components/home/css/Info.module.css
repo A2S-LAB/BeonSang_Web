@@ -1,7 +1,7 @@
 .box-text {
-  margin-bottom: 15rem;
   text-align: center;
-  height: 20vh;
+  height: 10vh;
+  margin-bottom: 5rem;
 }
 
 .box-text p {

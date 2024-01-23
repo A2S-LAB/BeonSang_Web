@@ -2,10 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20rem;
   width: 100vw;
-  height: 10vh;
-  margin: 10rem 0 5rem 0;
-  animation: onImage 3s;
+  height: 20vh;
 }
 
 .footer a {

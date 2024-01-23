@@ -3,7 +3,7 @@ import classes from './css/Info.module.css';
 export const Info = ({ scrollY }) => {
   return (
     <>
-      {scrollY >= 100 && (
+      {scrollY >= 0 && (
         <section className={classes['box-text']}>
           <p>
             <strong>시그니처 스프카레. </strong>

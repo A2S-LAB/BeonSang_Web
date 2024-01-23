@@ -5,7 +5,7 @@ export const Description = ({ scrollY }) => {
   console.log(scrollY);
   return (
     <section className={classes['brand-promise']}>
-      {scrollY >= 1100 && (
+      {scrollY >= 500 && (
         <div className={classes.top}>
           <div>
             <h3>BRAND PROMISE</h3>
@@ -20,8 +20,8 @@ export const Description = ({ scrollY }) => {
         </div>
       )}
 
-      {scrollY >= 1250 && (
-        <div className={classes.middle}>
+      {scrollY >= 600 && (
+        <div className={classes.bottom}>
           <div>
             <strong>1</strong>
             <p>
@@ -64,11 +64,6 @@ export const Description = ({ scrollY }) => {
               여깁니다.
             </p>
           </div>
-        </div>
-      )}
-
-      {scrollY >= 1850 && (
-        <div className={classes.bottom}>
           <div>
             완벽하진 않지만 조금씩, 조금 더 <br />
             우리가 모두 바라는 FOOD & LIFESTYLE <br />

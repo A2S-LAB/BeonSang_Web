@@ -20,7 +20,7 @@ export const Home = () => {
   return (
     <>
       <Header />
-      <Logo />
+      <Logo scrollY={scrollYValue} />
       <Info scrollY={scrollYValue} />
       <Carousel scrollY={scrollYValue} />
       <Description scrollY={scrollYValue} />
