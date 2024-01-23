@@ -1,10 +1,10 @@
 .box-logo {
-  margin-top: 10rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 105vh;
+  height: 100vh;
 }
 
 .box-logo__logo {

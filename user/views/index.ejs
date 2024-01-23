@@ -4,6 +4,14 @@
     <title>A2S</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/8bee8c83d0.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="https://unpkg.com/scrollreveal" defer></script>
+    <script src="/js/index.js" defer></script>
   </head>
   <body>
     <% include ./includes/header.ejs %>
@@ -23,28 +31,33 @@
 
         <p class="punchline">BONJOURDOG BAKESHOP. HANOKU. ONHWA DINING</p>
       </section>
-
-      <!-- 음식점 외부 사진 -->
-      <section class="group-photo">
-        <img
-          class="section__img"
-          src="https://plus.unsplash.com/premium_photo-1686090448301-4c453ee74718?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
-      </section>
     </main>
 
-    <script
-      src="https://kit.fontawesome.com/8bee8c83d0.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <section class="carousel">
+      <nav class="carousel__nav">
+        <button class="carousel__prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel__next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </nav>
 
-    <script>
-      ScrollReveal().reveal('.section__logo', { delay: 500 });
-      ScrollReveal().reveal('.headline', { delay: 1000 });
-      ScrollReveal().reveal('.tagline', { delay: 1500 });
-      ScrollReveal().reveal('.punchline', { delay: 2000 });
-      ScrollReveal().reveal('.group-photo', { delay: 2500 });
-    </script>
+      <div class="carousel__img-box">
+        <div class="carousel__img-box__img">
+          <img
+            class="section__img oute"
+            src="/image/restaurant.jpg"
+            alt="식당 외관"
+          />
+        </div>
+        <div class="carousel__img-box__img second">
+          <img class="section__img outer" src="/image/chef.jpg" alt="셰프" />
+        </div>
+        <div class="carousel__img-box__img">
+          <img class="section__img outer" src="/image/sushi.jpg" alt="스시" />
+        </div>
+      </div>
+    </section>
   </body>
 </html>
