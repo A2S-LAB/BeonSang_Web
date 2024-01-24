@@ -6,7 +6,7 @@ const AES = require("mysql-aes")
 
 // 로그인 페이지
 router.get("/", async (req, res, next) => {
-	res.render("login.ejs", {layout: "loginLayout"});
+	res.render("login/login.ejs", {layout: "login/loginLayout"});
 });
 
 router.post("/", async (req, res, next) => {
@@ -32,27 +32,26 @@ router.post("/", async (req, res, next) => {
 });
 
 // 회원가입 페이지
-router.get("/join", async (req, res, next) => {
-	res.render("join.ejs");
+router.get("/register", async (req, res, next) => {
+	res.render("login/register.ejs", {layout: "login/loginLayout"});
 });
 
-router.post("/join", async (req, res, next) => {
-
+router.post("/register", async (req, res, next) => {
 	res.redirect("/");
 });
 
 // 비밀번호 찾기 페이지
-router.get("/find", async (req, res, next) => {
-	res.render("find.ejs");
+router.get("/forgot_password", async (req, res, next) => {
+	res.render("login/forgot_password.ejs", {layout: "login/loginLayout"});
 });
 
-router.post("/find", async (req, res, next) => {
+router.post("/forgot_password", async (req, res, next) => {
 	res.redirect("/");
 });
 
 // 메인 페이지
 router.get("/main", async (req, res, next) => {
-	res.render("index");
+	res.render("index", {layout: false});
 });
 
 router.post("/main", async (req, res, next) => {
