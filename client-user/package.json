@@ -15,7 +15,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.21.2",
-    "uuid": "^9.0.1"
+    "uuid": "^9.0.1",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -26,5 +27,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "vite": "^5.0.8"
-  }
+  },
+  "proxy" : "http://127.0.0.1:5173"
 }
