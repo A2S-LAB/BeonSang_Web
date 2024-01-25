@@ -5,7 +5,7 @@ import { FaInstagram } from 'react-icons/fa';
 export const Footer = ({ scrollY }) => {
   return (
     <>
-      {scrollY > 1900 && (
+      {scrollY > 1550 && (
         <footer className={classes.footer}>
           <a
             href='https://map.naver.com/p/search/%EB%B2%94%EC%83%81/place/1111530355?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh'
