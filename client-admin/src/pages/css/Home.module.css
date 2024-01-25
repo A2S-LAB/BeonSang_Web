@@ -1,0 +1,26 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100svh;
+}
+
+.main h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-bottom: 5rem;
+}
+
+.main div {
+  display: flex;
+}
+
+.main a {
+  display: flex;
+  padding: 5rem;
+  width: 30vw;
+  height: 30vh;
+  box-shadow: 10px 10px 23px -8px rgba(0, 0, 0, 0.4);
+  font-size: 5rem;
+}
