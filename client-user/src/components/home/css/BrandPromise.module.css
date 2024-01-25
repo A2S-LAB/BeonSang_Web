@@ -5,50 +5,62 @@
   display: flex;
   flex-direction: column;
   font-weight: 500;
+  height: 70vh;
 }
 
-.top,
+.top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  animation: onText 1s;
+}
+
 .bottom {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 15px;
-  animation: onText 3s;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
 }
 
-.middle {
-  display: grid;
+.bottom div:last-child {
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 15px;
-}
-
-.bottom {
   margin-bottom: 1.5rem;
 }
 
-.middle div:first-child {
+.bottom div:first-child {
   grid-area: 2 / 2 / 3 / 3;
   animation: onText 3s;
 }
-.middle div:nth-child(2) {
+.bottom div:nth-child(2) {
   grid-area: 3 / 2 / 4 / 3;
   animation: onText 4s;
 }
-.middle div:nth-child(3) {
+.bottom div:nth-child(3) {
   grid-area: 2 / 3 / 3 / 4;
   animation: onText 5s;
 }
-.middle div:nth-child(4) {
+.bottom div:nth-child(4) {
   grid-area: 3 / 3 / 4 / 4;
   animation: onText 6s;
 }
-.middle div:last-child {
+.bottom div:nth-child(5) {
   grid-area: 4 / 3 / 5 / 4;
   animation: onText 7s;
+  margin-bottom: 8rem;
+}
+.bottom div:nth-child(6) {
+  grid-area: 5 / 2 / 6 / 3;
+  animation: onText 8s;
 }
 
-.middle strong {
+.bottom div:last-child {
+  grid-area: 5 / 3 / 6 / 4;
+  animation: onText 8s;
+}
+
+.bottom strong {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,12 +73,12 @@
 }
 
 .top div:first-child,
-.bottom div:first-child {
+.bottom__bottom div:first-child {
   grid-area: 2 / 2 / 3 / 3;
 }
 
 .top div:last-child,
-.bottom div:last-child {
+.bottom__bottom div:last-child {
   grid-area: 2 / 3 / 3 / 4;
 }
 
