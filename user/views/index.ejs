@@ -4,6 +4,8 @@
     <title>A2S</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/promise.css" />
 
     <script
       src="https://kit.fontawesome.com/8bee8c83d0.js"
@@ -16,48 +18,11 @@
   <body>
     <% include ./includes/header.ejs %>
 
-    <main>
-      <section>
-        <img class="section__logo" src="/image/A2S.png" alt="SPM LOGO" />
-      </section>
-      <section class="box-text">
-        <p class="headline">
-          GROWERS. CHOI DINING. KITSCH KITSCH DINING. MATGGAL POCHA.SENDWAY.
-          MOTIVE.
-        </p>
-        <p class="tagline">
-          DONGBAEK KATSU. HAPPY CHEESE SMILE. ASEUL CHEONGDAM. RYUSENSO.
-        </p>
-
-        <p class="punchline">BONJOURDOG BAKESHOP. HANOKU. ONHWA DINING</p>
-      </section>
-    </main>
-
-    <section class="carousel">
-      <nav class="carousel__nav">
-        <button class="carousel__prev">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="carousel__next">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-      </nav>
-
-      <div class="carousel__img-box">
-        <div class="carousel__img-box__img">
-          <img
-            class="section__img oute"
-            src="/image/restaurant.jpg"
-            alt="식당 외관"
-          />
-        </div>
-        <div class="carousel__img-box__img second">
-          <img class="section__img outer" src="/image/chef.jpg" alt="셰프" />
-        </div>
-        <div class="carousel__img-box__img">
-          <img class="section__img outer" src="/image/sushi.jpg" alt="스시" />
-        </div>
-      </div>
+    <section class="box-logo">
+      <img class="box-logo__logo" src="/assets/beomsang-logo.jpg" alt="범상" />
+      <% include ./indexIncludes/desc.ejs %>
     </section>
+    <% include ./indexIncludes/carousel.ejs %>
+    <main><% include ./indexIncludes/promise.ejs %></main>
   </body>
 </html>
