@@ -4,6 +4,7 @@
   grid-template-rows: repeat(3, 1fr);
   height: 80vh;
   text-align: left;
+  margin-bottom: 5rem;
 }
 
 .promise__top,
