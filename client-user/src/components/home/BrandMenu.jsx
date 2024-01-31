@@ -1,9 +1,9 @@
-import classes from './css/Info.module.css';
+import classes from './css/BrandMenu.module.css';
 
-export const Info = ({ scrollY }) => {
+export const BrandMenu = ({ scrollY }) => {
   return (
     <>
-      {scrollY >= 100 && (
+      {scrollY >= 0 && (
         <section className={classes['box-text']}>
           <p>
             <strong>시그니처 스프카레. </strong>
