@@ -1,0 +1,28 @@
+body {
+  font-family: 'Inter', 'NanumSquare', 'Apple SD Gothic Neo', 'Malgun Gothic',
+    'Nanum Gothic', 'Noto Sans', 'sans-serif';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1111;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3rem;
+  height: 5rem;
+  width: 100vw;
+  font-size: large;
+  font-weight: 700;
+  backdrop-filter: blur(30px);
+  z-index: 5;
+}
+
+a {
+  color: #111;
+}
