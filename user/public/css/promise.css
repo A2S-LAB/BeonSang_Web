@@ -1,0 +1,84 @@
+.promise {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 80vh;
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.promise__top,
+.promise__bottom {
+  grid-area: 1 / 2 / 2 / 4;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.promise__top h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.promise__top div:first-child,
+.promise__bottom div:first-child {
+  padding: 1rem;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.promise__top div:last-child,
+.promise__bottom div:last-child {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 1rem;
+}
+
+.promise__middle {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.promise__bottom {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+.promise__middle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-bottom: 3rem;
+}
+
+.promise__middle p:first-child {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.promise__middle p:nth-child(2) {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.promise__middle p:nth-child(3) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.promise__middle p:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.promise__middle p:last-child {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.promise__middle strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: #111;
+  color: #fff;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.border-line {
+  width: inherit;
+  border: 1px solid #111;
+  margin: 1rem 0 1rem 0;
+}
