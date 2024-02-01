@@ -8,13 +8,24 @@ var editImage = document.querySelector('.edit_img');
 var uploadForm = document.getElementById('uploadForm');
 
 let count = 0;
+let images = [
+  '/assets/beomsang-outer.jpeg',
+  '/assets/beomsang-inner.jpeg',
+  '/assets/beomsang-food.jpeg',
+];
+
+const IMAGES = [
+  { title: 'outer', image: images[0] },
+  { title: 'inner', image: images[1] },
+  { title: 'food', image: images[2] },
+];
 
 const handleCarousel = state => {
-  const IMAGES = [
-    { title: 'outer', image: '/assets/beomsang-outer.jpeg' },
-    { title: 'inner', image: '/assets/beomsang-inner.jpeg' },
-    { title: 'food', image: '/assets/beomsang-food.jpeg' },
-  ];
+  // const IMAGES = [
+  //   { title: 'outer', image: '/assets/beomsang-outer.jpeg' },
+  //   { title: 'inner', image: '/assets/beomsang-inner.jpeg' },
+  //   { title: 'food', image: '/assets/beomsang-food.jpeg' },
+  // ];
 
   const handle = {
     next: () => {
@@ -57,6 +68,7 @@ $('#fileInput').change(function() {
       processData: false,
       success: function(result) {
         if (result.code == 200){
+          images[count] = result.data; 
           $('.carousel__image img').attr('src', result.data);
           imgPath = result.data;
         } else if (result.code == 400){
@@ -71,5 +83,7 @@ $('#fileInput').change(function() {
 });
 
 
-
-// 저장 버튼 누르면 modify api 호출
+editImage.addEventListener('click', function() {
+  IMAGES[count].image = imgPath;
+  console.log(IMAGES[count].image);
+})
