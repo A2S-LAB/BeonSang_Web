@@ -4,7 +4,6 @@ const buttonNext = document.querySelector('.carousel__next');
 let count = 0;
 
 const handleCarousel = state => {
-  console.log(count);
   const IMAGES = [
     { title: 'outer', image: '/assets/beomsang-outer.jpeg' },
     { title: 'inner', image: '/assets/beomsang-inner.jpeg' },

@@ -1,0 +1,88 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url(../../assets/logo.png);
+}
+
+.backdrop {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  z-index: 3;
+  width: 30vw;
+  height: 60vh;
+}
+
+.main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  z-index: 3;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.main form div {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  height: 5rem;
+}
+
+.main form label {
+  margin-bottom: 1rem;
+}
+
+.main form div:nth-child(4) {
+  flex-direction: row;
+  align-items: center;
+}
+.main form div:nth-child(4) label {
+  margin-top: 0.5rem;
+}
+
+.main form input {
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #ffffff00;
+  border-bottom: 1px solid #111;
+  color: #111;
+  font-size: 1.5rem;
+}
+
+.main form button {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
+  width: 15rem;
+  height: 3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f15825;
+  transition: 0.5s all;
+}
+
+.main form a {
+  color: #f15825;
+  transition: 0.5s all;
+  margin-bottom: 1rem;
+}
+
+.main form button:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.main form a:hover {
+  color: #111;
+}
