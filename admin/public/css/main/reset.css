@@ -5,6 +5,7 @@
 
 * {
   box-sizing: border-box;
+  line-height: 1.4rem;
 }
 
 html,
@@ -134,9 +135,4 @@ table {
 
 a {
   text-decoration: none;
-  color: #111;
-}
-
-input {
-  outline: none;
 }

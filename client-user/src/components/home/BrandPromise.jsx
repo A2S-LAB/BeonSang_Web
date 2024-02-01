@@ -2,7 +2,6 @@ import classes from './css/BrandPromise.module.css';
 import { BrandPromiseText } from './BrandPromiseText';
 
 export const BrandPromise = ({ scrollY }) => {
-  console.log(scrollY);
   return (
     <section className={classes['brand-promise']}>
       {scrollY >= 800 && (

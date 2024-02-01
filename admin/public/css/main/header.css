@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  padding: 3rem;
+  height: 2rem;
+  width: 100%;
+  font-size: large;
+  font-weight: 700;
+  background-color: #efefef;
+  z-index: 5;
+}
+
+.header a {
+  margin: 0 3rem 0 3rem;
+}
