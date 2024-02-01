@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="/css/promise.css" />
     <link rel="stylesheet" href="/css/carousel.css" />
     <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/on-text.css" />
 
-    <script src="/js/home.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
   </head>
   <body>
     <% include ./includes/header.ejs %>
@@ -18,8 +19,7 @@
       <img class="box-logo__logo" src="/assets/beomsang-logo.jpg" alt="범상" />
       <% include ./indexIncludes/desc.ejs %>
     </section>
-    <% include ./indexIncludes/carousel.ejs %>
-    <main><% include ./indexIncludes/promise.ejs %></main>
-    <% include ./indexIncludes/footer.ejs %>
+    <% include ./indexIncludes/carousel.ejs %> <% include
+    ./indexIncludes/promise.ejs %> <% include ./indexIncludes/footer.ejs %>
   </body>
 </html>

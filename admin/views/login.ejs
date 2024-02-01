@@ -147,27 +147,20 @@
                 <!-- /Register -->
             </div>
         </div>
-    </div>
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../assets/vendor/js/bootstrap.js"></script>
-    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-
-    <!-- Place this tag in your head or just before your close body tag. -->
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
-</body>
-
+        <div>
+          <label for="password">비밀번호</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <input type="checkbox" name="remember" id="remember" />
+          <label for="remember">로그인 상태 유지</label>
+        </div>
+        <button>로그인</button>
+        <div>
+          <a href="/join">회원가입</a>
+          <a href="/find">비밀번호 찾기</a>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
