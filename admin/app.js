@@ -12,6 +12,7 @@ var recruitRouter = require('./routes/recruit');
 var projectRouter = require('./routes/project');
 
 var sequalize = require('./models/index.js').sequelize;
+var session = require('express-session');
 
 sequalize.sync();
 
@@ -22,6 +23,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.set("layout", "layout.ejs");
+
+app.use(
+  session({
+    resave: false,
+    saveUninitialized: true,
+    secret: process.env.SESSION_SECRET,
+    cookie: {
+      httpOnly: true,
+      secure: false,
+      maxAge: 1000*60*60*24 // 24시간
+    },
+  })
+)
 
 app.use(logger('dev'));
 app.use(express.json());

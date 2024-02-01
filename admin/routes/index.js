@@ -3,6 +3,7 @@ var router = express.Router();
 var bycrypt = require("bcryptjs");
 var db = require("../models/index.js");
 const AES = require("mysql-aes")
+const {isLoggedIn, isNotLoggedIn} = require('./sessionMiddleware.js');
 
 // 로그인 페이지
 router.get("/", async (req, res, next) => {
@@ -22,7 +23,19 @@ router.post("/", async (req, res, next) => {
 		// pw = AES.decrypt(pw, process.env.DB_PASSWORD_KEY)
 		var result = await bycrypt.compare(pw, admin.admin_password);
 		if (result) {
-			res.redirect("/main");
+			
+			// session 데이터 저장
+			var sessionLoginData = {
+				admin_id: admin.admin_id,
+				admin_name: admin.admin_name,
+			};
+
+			req.session.isLogined = sessionLoginData;
+
+			req.session.save(function(){
+				res.redirect('/main');
+			})
+
 		} else {
 			res.render("login.ejs", { error: "비밀번호가 일치하지 않습니다." });
 		}
@@ -81,11 +94,11 @@ router.post("/find", async (req, res, next) => {
 });
 
 // 메인 페이지
-router.get("/main", async (req, res, next) => {
-	res.render("index");
+router.get("/main", isLoggedIn, async (req, res, next) => {
+	res.render("index.ejs");
 });
 
-router.post("/main", async (req, res, next) => {
+router.post("/main", isLoggedIn, async (req, res, next) => {
 	res.redirect("/main");
 });
 
