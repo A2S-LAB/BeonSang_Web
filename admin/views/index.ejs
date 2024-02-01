@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>A2S</title>
-    <link rel="stylesheet" href="/css/main_reset.css" />
-    <link rel="stylesheet" href="/css/main_style.css" />
+    <title>범상 메인 페이지 - 수정</title>
+    <link rel="stylesheet" href="/css/main/reset.css" />
+    <link rel="stylesheet" href="/css/main/style.css" />
+    <link rel="stylesheet" href="/css/main/index.css" />
+    <link rel="stylesheet" href="/css/main/promise.css" />
+    <link rel="stylesheet" href="/css/main/carousel.css" />
+    <link rel="stylesheet" href="/css/main/footer.css" />
+    <link rel="stylesheet" href="/css/main/on-text.css" />
+
+    <script src="/js/carousel.js" defer></script>
   </head>
   <body>
     <% include ./includes/header.ejs %>
 
-    <main>
-      <section>
-        <img class="section__logo" src="/image/logo.png" alt="SPM LOGO" />
-      </section>
-      <section>
-        <p class="headline">
-          GROWERS. CHOI DINING. KITSCH KITSCH DINING. MATGGAL POCHA.SENDWAY.
-          MOTIVE.
-        </p>
-        <p class="tagline">
-          DONGBAEK KATSU. HAPPY CHEESE SMILE. ASEUL CHEONGDAM. RYUSENSO.
-        </p>
+    <section class="box-logo">
+      <img class="box-logo__logo" src="/assets/beomsang-logo.jpg" alt="범상" />
 
-        <p class="punchline">BONJOURDOG BAKESHOP. HANOKU. ONHWA DINING</p>
-      </section>
-
-      <!-- 음식점 외부 사진 -->
-      <section class="group-photo">
-        <img
-          class="section__img"
-          src="https://plus.unsplash.com/premium_photo-1686090448301-4c453ee74718?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        />
-      </section>
-    </main>
-
-    <script
-      src="https://kit.fontawesome.com/8bee8c83d0.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <script>
-      ScrollReveal().reveal('.section__logo', { delay: 500 });
-      ScrollReveal().reveal('.headline', { delay: 1000 });
-      ScrollReveal().reveal('.tagline', { delay: 1500 });
-      ScrollReveal().reveal('.punchline', { delay: 2000 });
-      ScrollReveal().reveal('.group-photo', { delay: 2500 });
-    </script>
+      <% include ./indexIncludes/desc.ejs %>
+    </section>
+    <% include ./indexIncludes/carousel.ejs %> <% include
+    ./indexIncludes/promise.ejs %> <% include ./indexIncludes/footer.ejs %>
   </body>
 </html>
