@@ -1,16 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Page</title>
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/style.css" />
-</head>
-<body>
-    <% include ./includes/header.ejs %>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>범상 메뉴 - 관리</title>
+    <link rel="stylesheet" href="/css/main/reset.css" />
+    <link rel="stylesheet" href="/css/main/style.css" />
+    <link rel="stylesheet" href="/css/menu/menu.css" />
+  </head>
+  <body>
+    <% include ./menuIncludes/menuHeader.ejs %>
 
-    <h1>This is Menu Page</h1>
-    
-</body>
+    <main class="menu-box">
+      <div class="category-box">
+        <h2>시그니처 스프카레</h2>
+        <ul class="card-list">
+          <li class="card">
+            <img
+              src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
+              alt="음식명"
+            />
+            <div class="card__middle">
+              <h3>홈런볼 스프커리</h3>
+              <p>
+                새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
+              </p>
+            </div>
+            <div class="card__bottom">
+              <strong>14,500 원</strong>
+              <div>
+                <button value="edit">수정</button>
+                <button value="delete">삭제</button>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
+              alt="음식명"
+            />
+            <div class="card__middle">
+              <h3>홈런볼 스프커리</h3>
+              <p>
+                새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
+              </p>
+            </div>
+            <div class="card__bottom">
+              <strong>14,500 원</strong>
+              <div>
+                <button value="edit" id="edit-button">수정</button>
+                <button value="delete">삭제</button>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
+              alt="음식명"
+            />
+            <div class="card__middle">
+              <h3>홈런볼 스프커리</h3>
+              <p>
+                새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
+              </p>
+            </div>
+            <div class="card__bottom">
+              <strong>14,500 원</strong>
+              <div>
+                <button value="edit">수정</button>
+                <button value="delete">삭제</button>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
+              alt="음식명"
+            />
+            <div class="card__middle">
+              <h3>홈런볼 스프커리</h3>
+              <p>
+                새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
+              </p>
+            </div>
+            <div class="card__bottom">
+              <strong>14,500 원</strong>
+              <div>
+                <button value="edit">수정</button>
+                <button value="delete">삭제</button>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <img
+              src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
+              alt="음식명"
+            />
+            <div class="card__middle">
+              <h3>홈런볼 스프커리</h3>
+              <p>
+                새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
+              </p>
+            </div>
+            <div class="card__bottom">
+              <strong>14,500 원</strong>
+              <div>
+                <button value="edit">수정</button>
+                <button value="delete">삭제</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
 </html>

@@ -1,5 +1,6 @@
 .carousel {
   position: relative;
+  width: 1000px;
   height: 50vh;
   margin-bottom: 5rem;
 }
@@ -8,8 +9,7 @@
   position: absolute;
   width: 1000px;
   height: 500px;
-  z-index: 10;
-  left: 6%;
+  z-index: 5;
 }
 
 .carousel__prev,
@@ -33,10 +33,10 @@
 }
 
 .carousel__prev {
-  left: 0rem;
+  left: 3rem;
 }
 .carousel__next {
-  right: 9rem;
+  right: 3rem;
 }
 
 .carousel img {
@@ -44,4 +44,39 @@
   object-fit: cover;
   width: 1000px;
   height: 500px;
+}
+
+#uploadForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: #f15825;
+  color: #fff;
+  border-radius: 1rem;
+  transition: 1s all;
+}
+
+#uploadForm label {
+  z-index: 10;
+}
+
+#uploadForm input {
+  position: absolute;
+  z-index: 30;
+  opacity: 0;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+#uploadForm:hover {
+  background-color: #111;
 }
