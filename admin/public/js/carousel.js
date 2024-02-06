@@ -21,6 +21,12 @@ const IMAGES = [
 ];
 
 const handleCarousel = state => {
+  // const IMAGES = [
+  //   { title: 'outer', image: '/assets/beomsang-outer.jpeg' },
+  //   { title: 'inner', image: '/assets/beomsang-inner.jpeg' },
+  //   { title: 'food', image: '/assets/beomsang-food.jpeg' },
+  // ];
+
   const handle = {
     next: () => {
       if (count < 2) {
@@ -46,37 +52,38 @@ carousel.addEventListener('click', function () {
   fileInput.click();
 });
 
-$('#fileInput').change(function () {
+$('#fileInput').change(function() {
+
   var formData = new FormData();
   var fileInput = document.getElementById('fileInput');
   if (fileInput.files[0]) {
     formData.append('file', fileInput.files[0]);
   }
   $.ajax({
-    url: '/upload',
-    type: 'POST',
-    data: formData,
-    cache: false,
-    contentType: false,
-    processData: false,
-    success: function (result) {
-      if (result.code == 200) {
-        images[count] = result.data;
-        $('.carousel__image img').attr('src', result.data);
-        imgPath = result.data;
-      } else if (result.code == 400) {
-        console.log(result.msg);
-      } else {
-        console.log('이미지 업로드 실패:' + result.msg);
+      url: '/upload',
+      type: 'POST',
+      data: formData,
+      cache: false,
+      contentType: false,
+      processData: false,
+      success: function(result) {
+        if (result.code == 200){
+          images[count] = result.data; 
+          $('.carousel__image img').attr('src', result.data);
+          imgPath = result.data;
+        } else if (result.code == 400){
+          console.log(result.msg);
+        } else {
+          console.log('이미지 업로드 실패:' + result.msg);
+        }
+      }, error: function(err) {
+        console.log("이미지 업로드 에러 발생:" + err);
       }
-    },
-    error: function (err) {
-      console.log('이미지 업로드 에러 발생:' + err);
-    },
   });
 });
 
-editImage.addEventListener('click', function () {
+
+editImage.addEventListener('click', function() {
   IMAGES[count].image = imgPath;
   console.log(IMAGES[count].image);
-});
+})
