@@ -22,7 +22,7 @@ var upload = multer({storage: storage});
 
 // 로그인 페이지
 router.get("/", async (req, res, next) => {
-	res.render("login.ejs", {layout: "loginLayout"});
+	res.render("login/login.ejs", {layout: "login/loginLayout"});
 });
 
 router.post("/", async (req, res, next) => {
@@ -60,57 +60,27 @@ router.post("/", async (req, res, next) => {
 });
 
 // 회원가입 페이지
-router.get("/join", async (req, res, next) => {
-	res.render("join.ejs");
+router.get("/register", async (req, res, next) => {
+	res.render("login/register.ejs", {layout: "login/loginLayout"});
 });
 
 router.post("/join", async (req, res, next) => {
 
-	var id = req.body.adminId;
-	var email = req.body.email;
-	var pw = req.body.password;
-
-	try{
-		var regAdminId = await db.Admin.findOne({where:{admin_id:id}});
-
-		if(regAdminId){
-			res.render("join.ejs", {error:"이미 존재하는 아이디입니다."});
-		} else {
-			var bcryptedPw = await bycrypt.hash(pw, 12);
-
-			var admins = {
-				admin_id: id,
-				admin_password: bcryptedPw,
-				admin_name: "관리자",
-				email: email,
-				telephone: "010-1234-5678",
-				used_yn_code: 1,
-				reg_date: new Date(),
-			};
-
-			var register = await db.Admin.create(admins);
-
-			res.render('login')
-
-			}
-		}catch(err){
-			console.log(err.message);
-	}
-
+	res.redirect("/");
 });
 
 // 비밀번호 찾기 페이지
-router.get("/find", async (req, res, next) => {
-	res.render("find.ejs");
+router.get("/forgot_password", async (req, res, next) => {
+	res.render("login/forgot_password.ejs", {layout: "login/loginLayout"});
 });
 
-router.post("/find", async (req, res, next) => {
+router.post("/forgot_password", async (req, res, next) => {
 	res.redirect("/");
 });
 
 // 메인 페이지
-router.get("/main", isLoggedIn, async (req, res, next) => {
-	res.render("index.ejs");
+router.get("/main", async (req, res, next) => {
+	res.render("index", {layout: false});
 });
 
 router.post("/main", isLoggedIn, async (req, res, next) => {
