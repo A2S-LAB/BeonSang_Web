@@ -1,6 +1,13 @@
-
-
 <section class="carousel">
+  <form
+    id="uploadForm"
+    action="/upload"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <label for="upload">사진 변경</label>
+    <input type="file" id="fileInput" name="file" id="upload" />
+  </form>
   <nav class="carousel__nav">
     <div class="carousel__prev"><</div>
     <div class="carousel__next">></div>
@@ -8,10 +15,4 @@
   <div class="carousel__image">
     <img src="/assets/beomsang-outer.jpeg" alt="가게 내부" />
   </div>
-  <form id="uploadForm" action="/upload" method="POST" enctype="multipart/form-data">
-    <input type="file" id="fileInput" name="file" style="display: none;" />
-    <label style="position: relative; display: inline-block; cursor: pointer;">
-      <img class="edit_img" src="/image/edit.png" style="width: 50px; height: 50px;" alt="수정" />
-    </label>
-  </form>
 </section>
