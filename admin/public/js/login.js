@@ -5,8 +5,6 @@ const boxId = document.querySelector('.box-id');
 const boxPassword = document.querySelector('.box-password');
 
 const handleValidation = e => {
-  const adminPassword = e.target.password.value;
-
   const createValidationInfo = document.createElement('p');
   createValidationInfo.className = 'validation-info';
   const validationInfoList = document.querySelectorAll('.validation-info');
