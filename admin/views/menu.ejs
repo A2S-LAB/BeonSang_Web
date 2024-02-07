@@ -1,117 +1,208 @@
 <!DOCTYPE html>
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>범상 메뉴 - 관리</title>
+
     <link rel="stylesheet" href="/css/main/reset.css" />
+
     <link rel="stylesheet" href="/css/main/style.css" />
+
     <link rel="stylesheet" href="/css/menu/menu.css" />
+
+    <script src="/js/menu.js" defer></script>
   </head>
+
   <body>
-    <% include ./menuIncludes/menuHeader.ejs %>
+    <header class="header">
+      <div>
+        <a href="/main">범상 스프커리</a>
+      </div>
+
+      <nav>
+        <a href="/menu">메뉴</a>
+
+        <button class="button-add">음식 추가하기</button>
+      </nav>
+    </header>
 
     <main class="menu-box">
       <div class="category-box">
         <h2>시그니처 스프카레</h2>
+
         <ul class="card-list">
           <li class="card">
             <img
               src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
               alt="음식명"
             />
+
             <div class="card__middle">
               <h3>홈런볼 스프커리</h3>
+
               <p>
                 새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
               </p>
             </div>
+
             <div class="card__bottom">
               <strong>14,500 원</strong>
+
               <div>
                 <button value="edit">수정</button>
+
                 <button value="delete">삭제</button>
               </div>
             </div>
           </li>
+
           <li class="card">
             <img
               src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
               alt="음식명"
             />
+
             <div class="card__middle">
               <h3>홈런볼 스프커리</h3>
+
               <p>
                 새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
               </p>
             </div>
+
             <div class="card__bottom">
               <strong>14,500 원</strong>
+
               <div>
                 <button value="edit" id="edit-button">수정</button>
+
                 <button value="delete">삭제</button>
               </div>
             </div>
           </li>
+
           <li class="card">
             <img
               src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
               alt="음식명"
             />
+
             <div class="card__middle">
               <h3>홈런볼 스프커리</h3>
+
               <p>
                 새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
               </p>
             </div>
+
             <div class="card__bottom">
               <strong>14,500 원</strong>
+
               <div>
                 <button value="edit">수정</button>
+
                 <button value="delete">삭제</button>
               </div>
             </div>
           </li>
+
           <li class="card">
             <img
               src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
               alt="음식명"
             />
+
             <div class="card__middle">
               <h3>홈런볼 스프커리</h3>
+
               <p>
                 새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
               </p>
             </div>
+
             <div class="card__bottom">
               <strong>14,500 원</strong>
+
               <div>
                 <button value="edit">수정</button>
+
                 <button value="delete">삭제</button>
               </div>
             </div>
           </li>
+
           <li class="card">
             <img
               src="https://ldb-phinf.pstatic.net/20231231_196/1703999274340lCUuh_JPEG/wVXGm0aDqltDD6eK8N2nVkX43M0X-1UpIp9eGj4Msd0Z2KNHUYGZwnNL5rGdjXgu.jpg"
               alt="음식명"
             />
+
             <div class="card__middle">
               <h3>홈런볼 스프커리</h3>
+
               <p>
                 새우볼 / 두부가라아게 / 메추리알이 들어간 다양한 맛의 스프커리
               </p>
             </div>
+
             <div class="card__bottom">
               <strong>14,500 원</strong>
+
               <div>
                 <button value="edit">수정</button>
+
                 <button value="delete">삭제</button>
               </div>
             </div>
           </li>
         </ul>
       </div>
+
+      <div class="overlay hidden"></div>
+
+      <form action="#" class="form hidden">
+        <div>
+          <input type="file" name="" id="" />
+        </div>
+
+        <div>
+          <label for="form__food-name">음식명</label>
+
+          <input type="text" id="food-name" />
+        </div>
+
+        <div>
+          <label for="food-cateogry">카테고리</label>
+
+          <select id="food-category">
+            <option value="">시그니처 스프카레</option>
+
+            <option value="">시그니처 스프카레</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="form__food-description">음식 설명</label>
+
+          <input type="text" id="food-description" />
+        </div>
+
+        <div>
+          <label for="form__food-price">가격</label>
+
+          <input type="text" id="food-price" />
+        </div>
+
+        <div>
+          <button type="submit">추가</button>
+
+          <button type="submit" class="button-close">닫기</button>
+        </div>
+      </form>
     </main>
   </body>
 </html>

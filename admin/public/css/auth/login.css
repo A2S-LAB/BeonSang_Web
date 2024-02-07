@@ -13,8 +13,8 @@
   background-color: rgb(255, 255, 255);
   border-radius: 1rem;
   z-index: 3;
-  width: 30vw;
-  height: 60vh;
+  width: 500px;
+  height: 700px;
 }
 
 .main form {
@@ -39,7 +39,8 @@
   height: 5rem;
 }
 
-.main form label {
+.main form div:first-child,
+.main form div:nth-child(2) {
   margin-bottom: 1rem;
 }
 
@@ -52,12 +53,12 @@
 }
 
 .main form input {
-  margin-bottom: 1rem;
   border: none;
   background-color: #ffffff00;
   border-bottom: 1px solid #111;
   color: #111;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .main form button {
@@ -85,4 +86,8 @@
 
 .main form a:hover {
   color: #111;
+}
+
+.validation-info {
+  color: #f12525;
 }

@@ -4,7 +4,7 @@
   grid-template-rows: repeat(3, 1fr);
   height: 80vh;
   text-align: left;
-  margin-bottom: 5rem;
+  margin-bottom: 5px;
 }
 
 .promise__top,
@@ -46,7 +46,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  margin-bottom: 3rem;
+  margin-bottom: 3px;
 }
 
 .promise__middle p:first-child {
@@ -74,7 +74,7 @@
   background-color: #111;
   color: #fff;
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 8px;
 }
 
 .border-line {

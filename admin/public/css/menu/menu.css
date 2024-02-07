@@ -1,10 +1,48 @@
 .menu-box {
   display: flex;
+  position: relative;
   flex-direction: column;
   margin-top: 10rem;
   width: 100vw;
   height: 100vh;
   padding: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  padding: 3rem;
+  height: 2rem;
+  width: 100%;
+  font-size: large;
+  font-weight: 700;
+  background-color: #efefef;
+  z-index: 80;
+}
+
+.header a {
+  margin: 0 3rem 0 3rem;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20vw;
+  font-size: large;
+  font-weight: 700;
+}
+
+.header button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: large;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .category-box h2 {
@@ -16,6 +54,7 @@
 .card-list {
   display: flex;
   overflow: scroll;
+  height: 50vh;
 }
 
 .card {
@@ -30,7 +69,7 @@
 
 .card img {
   border-radius: 1.5rem 1.5rem 0 0;
-  width: 15vw;
+  width: inherit;
   height: 20vh;
   object-fit: cover;
 }
@@ -81,9 +120,102 @@
 
 .overlay {
   top: 0;
+  left: 0;
   position: fixed;
-  z-index: 3;
+  z-index: 94;
   width: 100vw;
   height: 100vh;
   background-color: #00000058;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 30%;
+  width: 500px;
+  border-radius: 1rem;
+  height: 700px;
+  z-index: 95;
+  background-color: #fff;
+}
+
+.form button:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.form input {
+  margin-bottom: 1rem;
+  border: none;
+  background-color: #ffffff00;
+  border-bottom: 1px solid #111;
+  color: #111;
+  font-size: 1.5rem;
+}
+
+.form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 300px;
+}
+
+.form select {
+  border: none;
+  border-bottom: 1px solid #111;
+}
+
+.form button {
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 1rem;
+  width: 300px;
+  height: 3rem;
+  cursor: pointer;
+  color: #fff;
+  background-color: #f15825;
+  transition: 0.5s all;
+}
+
+.hidden {
+  display: none;
+  animation: 0.5s onForm;
+}
+
+.overlay,
+.form {
+  animation: 0.5s onForm;
+}
+
+@keyframes onForm {
+  0% {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .card {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card__bottom button {
+    width: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 35vw;
+  }
 }
