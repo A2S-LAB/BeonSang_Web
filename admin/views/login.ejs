@@ -12,18 +12,15 @@
       <div class="backdrop"></div>
       <form id="formAuthentication" class="mb-3" action="/" method="POST">
         <h1>범상</h1>
-        <div>
+        <div class="box-id">
           <label for="adminId">아이디</label>
           <input type="text" name="adminId" id="adminId" />
         </div>
-        <div>
+        <div class="box-password">
           <label for="password">비밀번호</label>
           <input type="password" name="password" id="password" />
         </div>
-        <div>
-          <input type="checkbox" name="remember" id="remember" />
-          <label for="remember">로그인 상태 유지</label>
-        </div>
+
         <button>로그인</button>
         <div>
           <a href="/join">회원가입</a>
@@ -31,5 +28,7 @@
         </div>
       </form>
     </main>
+
+    <script src="/js/login.js"></script>
   </body>
 </html>
