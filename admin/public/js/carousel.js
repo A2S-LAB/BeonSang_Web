@@ -4,8 +4,8 @@ const buttonNext = document.querySelector('.carousel__next');
 
 var carouselImage = document.querySelector('.carousel__nav');
 var fileInput = document.getElementById('fileInput');
-var editImage = document.querySelector('.edit_img');
 var uploadForm = document.getElementById('uploadForm');
+var submitForm = document.getElementById('submitForm');
 
 let count = 0;
 let images = [
@@ -53,17 +53,20 @@ $('#fileInput').change(function () {
     formData.append('file', fileInput.files[0]);
   }
   $.ajax({
-    url: '/upload',
+    url: '/image/upload',
     type: 'POST',
     data: formData,
     cache: false,
     contentType: false,
     processData: false,
+    
     success: function (result) {
       if (result.code == 200) {
         images[count] = result.data;
         $('.carousel__image img').attr('src', result.data);
         imgPath = result.data;
+        IMAGES[count].image = imgPath;
+
       } else if (result.code == 400) {
         console.log(result.msg);
       } else {
@@ -76,7 +79,32 @@ $('#fileInput').change(function () {
   });
 });
 
-editImage.addEventListener('click', function () {
-  IMAGES[count].image = imgPath;
-  console.log(IMAGES[count].image);
-});
+submitForm.addEventListener('click', function () {
+  alert('이미지가 변경되었습니다.');
+  console.log(count);
+  console.log(imgPath);
+
+  $.ajax({
+    url: '/image/save',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+      carousel_id: count,
+      img_path: imgPath
+    },
+    cache: false,
+
+    success: function(result){
+      if(result.code ==200){
+        console.log('이미지 저장 성공');
+      } else if (result.code == 400){
+        console.log(result.msg);
+      } else {
+        console.log('이미지 저장 실패:' + result.msg);
+      }
+    },
+    error: function(err){
+      console.log('이미지 저장 에러 발생:' + err);
+    }
+    })
+  });

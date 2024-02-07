@@ -53,7 +53,7 @@
   position: absolute;
   flex-direction: column;
   top: 0;
-  right: 0;
+  right: 5.5rem;
   z-index: 99;
   width: 5rem;
   height: 3rem;
@@ -78,5 +78,40 @@
 }
 
 #uploadForm:hover {
+  background-color: #111;
+}
+
+#submitForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: #f15825;
+  color: #fff;
+  border-radius: 1rem;
+  transition: 1s all;
+}
+
+#submitForm label {
+  z-index: 10;
+}
+
+#submitForm input {
+  position: absolute;
+  z-index: 30;
+  opacity: 0;
+  width: 5rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+#submitForm:hover {
   background-color: #111;
 }
