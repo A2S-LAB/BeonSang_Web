@@ -13,5 +13,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize; 
 
 db.Admin = require('./admin.js')(sequelize,Sequelize);
+db.Main = require('./main.js')(sequelize,Sequelize);
+db.Menu = require('./menu.js')(sequelize,Sequelize);
 
 module.exports = db;

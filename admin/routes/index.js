@@ -118,7 +118,7 @@ router.post("/main", isLoggedIn, async (req, res, next) => {
 });
 
 // 파일 업로드
-router.post("/upload", upload.single('file'), async (req, res, next) => {
+router.post("/image/upload", upload.single('file'), async (req, res, next) => {
 	var apiResult = {
         code: 400,
         data: null,
@@ -148,5 +148,34 @@ router.post("/upload", upload.single('file'), async (req, res, next) => {
     res.json(apiResult)
 
 });
+
+router.post("/image/save", async(req, res, next)=>{
+	var apiResult = {
+		code: 400,
+		data: null,
+		msg: "",
+	 };
+	try{
+		var carousel_id = req.body.carousel_id;
+		var img_path = req.body.img_path;
+
+		var main = {
+			carousel_id: carousel_id,
+			img_path: img_path,
+			reg_date: Date.now() 
+		};
+
+		var result = await db.Main.create(main);
+		apiResult.code = 200;
+		apiResult.data = result;
+		apiResult.msg = "이미지 변경 성공";
+
+	}catch(err){
+		apiResult.code = 500;
+		apiResult.data = null;
+		apiResult.msg = "이미지 변경 실패";
+	}
+	res.json(apiResult);
+})
 
 module.exports = router;
