@@ -46,6 +46,35 @@ carousel.addEventListener('click', function () {
   fileInput.click();
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+  console.log(count)
+  $.ajax({
+    url: '/image/load',
+    type: 'GET',
+    cache: false,
+    dataType: 'json',
+    data: {
+      carousel_id: count,
+    },
+
+    success: function(result){
+      if(result.code == 200){
+        console.log('이미지 로드 성공');
+        console.log(result.data);
+        IMAGES[count].image = result.data.img_path;
+        carousel.innerHTML = `<img src='${IMAGES[count].image}' alt='${IMAGES[count].title}'>`;
+      } else {
+        console.log('이미지 로드 실패:' + result.msg);
+      }
+    },
+    error: function(err){
+      console.log('이미지 로드 에러 발생:' + err);
+    }
+  })
+})
+
+
 $('#fileInput').change(function () {
   var formData = new FormData();
   var fileInput = document.getElementById('fileInput');
@@ -81,8 +110,6 @@ $('#fileInput').change(function () {
 
 submitForm.addEventListener('click', function () {
   alert('이미지가 변경되었습니다.');
-  console.log(count);
-  console.log(imgPath);
 
   $.ajax({
     url: '/image/save',
@@ -97,6 +124,7 @@ submitForm.addEventListener('click', function () {
     success: function(result){
       if(result.code ==200){
         console.log('이미지 저장 성공');
+
       } else if (result.code == 400){
         console.log(result.msg);
       } else {

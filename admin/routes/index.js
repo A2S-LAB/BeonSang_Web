@@ -117,6 +117,36 @@ router.post("/main", isLoggedIn, async (req, res, next) => {
 	res.redirect("/main");
 });
 
+router.get("/image/load", async (req, res, next) => {
+    var apiResult = {
+        code: 400,
+        data: null,
+        msg: "",
+    };
+    try {
+        // carousel_id에 따라 가장 최신의 데이터를 가져오는 SQL 쿼리 작성
+        var result = await db.Main.findOne({
+            where: {
+                carousel_id: req.query.carousel_id 
+            },
+            order: [['img_id', 'DESC']] // id 역순으로 정렬하여 가장 최신의 데이터를 가져옵니다.
+        });
+
+        if (result) {
+            apiResult.code = 200;
+            apiResult.data = result;
+            apiResult.msg = "이미지 로드 성공";
+        } else {
+            apiResult.code = 404;
+            apiResult.msg = "해당 carousel_id에 대한 데이터가 없습니다.";
+        }
+    } catch (err) {
+        apiResult.code = 500;
+        apiResult.msg = "이미지 로드 실패";
+    }
+    res.json(apiResult);
+});
+
 // 파일 업로드
 router.post("/image/upload", upload.single('file'), async (req, res, next) => {
 	var apiResult = {
