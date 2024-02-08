@@ -26,18 +26,46 @@ const handleCarousel = state => {
       if (count < 2) {
         count++;
         carousel.innerHTML = `<img src='${IMAGES[count].image}' alt='${IMAGES[count].title}'>`;
+        loadImage(count);
       }
     },
     prev: () => {
       if (count > 0) {
         count--;
         carousel.innerHTML = `<img src='${IMAGES[count].image}' alt='${IMAGES[count].title}'>`;
+        loadImage(count);
       }
     },
   };
 
   return handle[state]();
 };
+
+// 이미지 로드 함수 정의
+function loadImage(index) {
+  $.ajax({
+    url: '/image/load',
+    type: 'GET',
+    cache: false,
+    dataType: 'json',
+    data: {
+      carousel_id: index,
+    },
+    success: function(result) {
+      if (result.code == 200) {
+        console.log('이미지 로드 성공');
+        console.log(result.data);
+        IMAGES[index].image = result.data.img_path;
+        carousel.innerHTML = `<img src='${IMAGES[index].image}' alt='${IMAGES[index].title}'>`;
+      } else {
+        console.log('이미지 로드 실패:' + result.msg);
+      }
+    },
+    error: function(err) {
+      console.log('이미지 로드 에러 발생:' + err);
+    }
+  });
+}
 
 buttonPrev.addEventListener('click', handleCarousel.bind(this, 'prev'));
 buttonNext.addEventListener('click', handleCarousel.bind(this, 'next'));
@@ -95,6 +123,7 @@ $('#fileInput').change(function () {
         $('.carousel__image img').attr('src', result.data);
         imgPath = result.data;
         IMAGES[count].image = imgPath;
+        console.log(count)
 
       } else if (result.code == 400) {
         console.log(result.msg);
