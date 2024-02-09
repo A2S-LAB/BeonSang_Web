@@ -1,122 +1,62 @@
-.menu-box {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  margin-top: 10rem;
-  width: 100vw;
-  height: 100vh;
-  padding: 5rem;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
+  top: 0;
   left: 0;
-  padding: 3rem;
-  height: 2rem;
-  width: 100%;
+  padding: 30px;
+  height: 90px;
+  width: 100vw;
   font-size: large;
   font-weight: 700;
-  background-color: #efefef;
-  z-index: 80;
-}
-
-.header a {
-  margin: 0 3rem 0 3rem;
+  backdrop-filter: blur(30px);
+  z-index: 99;
 }
 
 .header nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 20vw;
-  font-size: large;
-  font-weight: 700;
+  justify-content: space-between;
+  width: 200px;
 }
 
 .header button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border: none;
   font-size: large;
   font-weight: 700;
   cursor: pointer;
 }
 
-.category-box h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
+/* Menu */
+
+.menu-box {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 15rem;
+  background-color: #111;
+  width: 100vw;
 }
 
-.card-list {
-  display: flex;
-  overflow: scroll;
-  height: 50vh;
+.category-box-left {
+  grid-area: 1 / 1 / 2 / 5;
+}
+.category-box-right {
+  grid-area: 1 / 5 / 2 / 7;
 }
 
-.card {
-  width: 15vw;
-  height: 40vh;
-  box-shadow: 10px 10px 50px -15px rgba(0, 0, 0, 0.408);
-  -webkit-box-shadow: 10px 10px 50px -15px rgba(0, 0, 0, 0.282);
-  -moz-box-shadow: 10px 10px 50px -15px rgba(0, 0, 0, 0.137);
-  border-radius: 1.5rem;
-  margin: 1rem;
-}
-
-.card img {
-  border-radius: 1.5rem 1.5rem 0 0;
-  width: inherit;
-  height: 20vh;
-  object-fit: cover;
-}
-
-.card__middle,
-.card__bottom {
-  padding: 1rem;
-}
-
-.card__bottom {
-  display: flex;
-  justify-content: space-between;
-}
-
-.card__bottom strong {
+.title-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-style: 1.5rem;
-  font-weight: 600;
-  background-color: #111;
-  color: #fff;
-  width: 5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
+  color: #f15825;
+  width: 60vw;
+  font-size: 2.5rem;
 }
 
-.card__bottom button {
-  width: 5rem;
-  height: 2.5rem;
-  cursor: pointer;
-}
-
-.edit-modal {
-  position: fixed;
-  top: 20%;
-  left: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  z-index: 5;
-  width: 50vw;
-  height: 70vh;
-  background-color: #fff;
-  border-radius: 1rem;
-}
+/* ADD Form */
 
 .overlay {
   top: 0;

@@ -1,8 +1,8 @@
 .carousel {
   position: relative;
   width: 1000px;
-  height: 50vh;
-  margin-bottom: 5rem;
+  height: 500px;
+  margin-bottom: 150px;
 }
 
 .carousel__nav {
@@ -29,7 +29,7 @@
   background-color: #05050500;
   backdrop-filter: blur(5px);
   cursor: pointer;
-  z-index: 99;
+  z-index: 90;
 }
 
 .carousel__prev {
@@ -54,7 +54,7 @@
   flex-direction: column;
   top: 0;
   right: 5.5rem;
-  z-index: 99;
+  z-index: 90;
   width: 5rem;
   height: 3rem;
   cursor: pointer;
@@ -89,7 +89,7 @@
   flex-direction: column;
   top: 0;
   right: 0;
-  z-index: 99;
+  z-index: 90;
   width: 5rem;
   height: 3rem;
   cursor: pointer;
