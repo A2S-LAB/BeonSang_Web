@@ -1,0 +1,102 @@
+.text-box {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #111;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  width: 1500px;
+}
+
+.info-box h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#map-songdo,
+#map-hapjeong {
+  width: 500px;
+  height: 300px;
+  border-radius: 1rem;
+  box-shadow: -2px 4px 5px 3px rgba(0, 0, 0, 0.53);
+}
+
+.naver-maker-box {
+  background-color: #2f96fc;
+}
+
+.naver-maker {
+  color: #fff;
+  cursor: pointer;
+}
+
+.shop-description {
+  padding: 5rem;
+  border-radius: 1rem;
+  transition: 1s all;
+}
+
+.shop-description:hover {
+  background-color: #cccccc76;
+}
+
+.box-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.box-description span {
+  margin-right: 0.5rem;
+}
+
+.metro-highlight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #6f99d0;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+}
+
+.seoul-metro:first-child {
+  background-color: #3cb44a;
+}
+
+.seoul-metro:nth-child(2) {
+  background-color: #b5500b;
+}
+
+.nav-group {
+  display: flex;
+}
+
+.nav-group a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #f15825;
+  width: 100px;
+  height: 30px;
+  transition: 1s all;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.nav-group a:hover {
+  background-color: #111;
+  color: #fff;
+}

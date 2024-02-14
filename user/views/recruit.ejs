@@ -1,13 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body class="grey-bg">
-    <%- include('./includes/header.ejs') %>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <title>범상 - 오시는 길</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css//map.css" />
+
+    <script
+      type="text/javascript"
+      src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=2a6ghdpl4n"
+    ></script>
+  </head>
+  <body class="grey-bg">
+    <% include ./includes/header.ejs %>
+
+    <main class="main">
+      <div class="text-box">
+        <h1 class="title">오시는 길</h1>
+      </div>
+
+      <div class="info-box">
+        <div class="shop-description">
+          <h3>인천 송도점</h3>
+          <strong>인천 연수구 하모니로 158 송도타임스페이스 D동 103호</strong>
+          <p>0507-1335-7306</p>
+          <span>영업 시간: 11:00 - 21:00</span>
+          <div class="box-description">
+            <span class="metro-highlight">인천1</span>
+            <p>인천대입구역 1번 출구에서 610m</p>
+          </div>
+
+          <nav class="nav-group">
+            <a>예약</a>
+            <a>리뷰</a>
+            <a>문의</a>
+            <a>거리뷰</a>
+          </nav>
+          <section id="map-songdo"></section>
+        </div>
+
+        <div class="border-line"></div>
+
+        <div class="shop-description">
+          <h3>서울 합정점</h3>
+          <strong>서울 마포구 포은로2가길 65 B동 1층 102호</strong>
+          <p>0507-1374-1733</p>
+          <span>영업 시간: 오픈 준비중</span>
+          <div class="box-description">
+            <span class="metro-highlight seoul-metro">2</span>
+            <span class="metro-highlight seoul-metro">6</span>
+            <p>합정역 8번 출구에서 320m</p>
+          </div>
+
+          <nav class="nav-group">
+            <a>예약</a>
+            <a>리뷰</a>
+            <a>문의</a>
+            <a>거리뷰</a>
+          </nav>
+
+          <section id="map-hapjeong"></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/map.js"></script>
+  </body>
 </html>

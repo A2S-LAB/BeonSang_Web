@@ -35,9 +35,10 @@
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  margin-top: 15rem;
+  margin-top: 10rem;
   background-color: #111;
   width: 100vw;
+  height: 100vh;
 }
 
 .category-box-left {
@@ -53,7 +54,21 @@
   align-items: center;
   color: #f15825;
   width: 60vw;
+  height: 60px;
   font-size: 2.5rem;
+}
+
+.category-box__inner {
+  display: flex;
+  color: #fff;
+}
+
+.category-box__item-list {
+  margin-top: 1rem;
+  width: 600px;
+  height: 600px;
+  background-color: #fff;
+  color: #111;
 }
 
 /* ADD Form */
