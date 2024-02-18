@@ -3,11 +3,116 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>범상 - 메뉴</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body class="grey-bg">
-    <%- include('./includes/header.ejs') %>
+    <header class="header">
+      <div>
+        <a href="/">범상 스프커리</a>
+      </div>
+
+      <nav>
+        <a class="highlight" href="/menu">메뉴</a>
+        <a href="/recruit">채용</a>
+        <a
+          href="https://map.naver.com/p/search/%EB%B2%94%EC%83%81/place/1111530355?searchType=place&lng=126.6427315&lat=37.3834875&placePath=/booking?bookingRedirectUrl=https://pcmap.place.naver.com/restaurant/1111530355/booking?theme=place&entry=pll&c=15.00,0,0,0,dh"
+        >
+          예약
+        </a>
+      </nav>
+    </header>
+
+    <nav class="side-nav">
+      <button class="button" value="시그니처 스프카레">
+        시그니처 스프카레
+      </button>
+      <button class="button" value="스프카레">스프카레</button>
+      <button class="button" value="퓨전 호랑이">퓨전 호랑이</button>
+      <button class="button" value="아기 호랑이">아기 호랑이 [키즈메뉴]</button>
+      <button class="button" value="곁들임/후식">곁들임 / 후식</button>
+      <button class="button" value="사이드 토핑">사이드 토핑</button>
+      <button class="button" value="음료">음료</button>
+    </nav>
+
+    <div class="menu">
+      <h1>범상 - 메뉴</h1>
+
+      <section class="tip">
+        <h2>스프커리 맛있게 먹는 법</h2>
+        <div class="tip-box">
+          <ul>
+            <ol class="tip__task">
+              <strong class="task__count">1</strong>
+              <p>함께 제공된 레몬을 '밥 위에' 골고루 뿌려주세요!</p>
+            </ol>
+            <ol class="tip__task">
+              <strong class="task__count">2</strong>
+              <p>예쁘게 토핑된 야채를 카레에 푸욱 담가 맛보세요.</p>
+            </ol>
+            <ol class="tip__task">
+              <strong class="task__count">3</strong>
+              <p>숟가락에 야무지게 뜬 밥을 카레에 적셔 드세요.</p>
+            </ol>
+            <ol class="tip__task">
+              <strong class="task__count">4</strong>
+              <p>그새 밥이 없으시다구요? 추가 밥은 언제든 말씀해주세요!</p>
+            </ol>
+          </ul>
+        </div>
+      </section>
+
+      <main class="menu__card-group">
+        <div class="menu__card">
+          <img src="/assets/food/야채_스프커리.png" alt="야채 스프커리" />
+          <div class="menu__description">
+            <div class="description__top">
+              <h4>야채 스프커리</h4>
+              <strong>9,900원</strong>
+            </div>
+            <p>대충 설명 맛은 흥부가 보장함!</p>
+          </div>
+        </div>
+
+        <div class="menu__card">
+          <img src="/assets/food/야채_스프커리.png" alt="야채 스프커리" />
+          <div class="menu__description">
+            <div class="description__top">
+              <h4>야채 스프커리</h4>
+              <strong>9,900원</strong>
+            </div>
+            <p>대충 설명 맛은 놀부가 보장함!</p>
+          </div>
+        </div>
+
+        <div class="menu__card">
+          <img src="/assets/food/야채_스프커리.png" alt="야채 스프커리" />
+          <div class="menu__description">
+            <div class="description__top">
+              <h4>야채 스프커리</h4>
+              <strong>9,900원</strong>
+            </div>
+            <p>대충 설명 맛은 흥부가 보장함!</p>
+          </div>
+        </div>
+
+        <div class="menu__card">
+          <img src="/assets/food/야채_스프커리.png" alt="야채 스프커리" />
+          <div class="menu__description">
+            <div class="description__top">
+              <h4>야채 스프커리</h4>
+              <strong>9,900원</strong>
+            </div>
+            <p>대충 설명 맛은 놀부가 보장함!</p>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

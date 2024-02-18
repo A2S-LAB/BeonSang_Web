@@ -14,7 +14,6 @@
 .info-box {
   display: flex;
   justify-content: space-between;
-  width: 1500px;
 }
 
 .info-box h3 {

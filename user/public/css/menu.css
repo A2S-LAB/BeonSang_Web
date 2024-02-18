@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+body {
+  background-color: #564c43;
+  color: #fff;
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  padding: 3rem;
+  height: 2rem;
+  width: 100%;
+  font-size: large;
+  font-weight: 700;
+  z-index: 5;
+}
+
+.header a {
+  margin: 0 3rem 0 3rem;
+  color: #fff;
+}
+
+.highlight {
+  border-bottom: 1px solid #fff;
+}
+
+.header-menu {
+  margin-top: 150px;
+}
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  right: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-nav button {
+  cursor: pointer;
+  border: 1px solid #111;
+  background-color: #00000000;
+  color: #fff;
+  transition: 1s all;
+  width: 170px;
+}
+
+.side-nav button:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 500px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.tip {
+  animation: 1s onText;
+}
+
+.menu-options {
+  display: table;
+  width: 800px;
+  animation: 1.5s onText;
+}
+
+section {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+section h2 {
+  color: #ea9c4d;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tip-box {
+  border: 1px solid #ea9c4d;
+  padding: 1rem 5rem 1rem 5rem;
+  border-radius: 1rem;
+  width: 1000px;
+}
+
+.tip__task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #baa692;
+  letter-spacing: 3px;
+}
+
+.tip__task strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border: 1px solid #ea9c4d;
+  color: #ea9c4d;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  letter-spacing: 0px;
+}
+
+.menu__card {
+  display: flex;
+  color: #d0b496;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 2rem;
+  animation: 2s onText;
+}
+
+.menu__card-group {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 60vw;
+}
+
+.menu__card {
+  width: 600px;
+  margin: 0;
+}
+
+.menu__card p {
+  font-size: 5px;
+}
+
+.menu__card:nth-child(2),
+.menu__card:nth-child(4),
+.menu__card:nth-child(6) {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+  margin-top: 5rem;
+}
+
+.menu__card img {
+  width: 250px;
+  height: 200px;
+}
+
+.menu__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.description__top {
+  display: flex;
+}
+
+.description__top h4 {
+  margin-right: 1rem;
+}
+
+@keyframes onText {
+  0% {
+    opacity: 0%;
+  }
+
+  70% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
